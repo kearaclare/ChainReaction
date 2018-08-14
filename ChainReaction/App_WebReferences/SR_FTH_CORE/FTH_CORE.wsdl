@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FTH_CORE" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://150.109.42.139:8888/FTH_CORE.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://150.109.42.139:8888/FTH_CORE.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://150.109.42.139:8888/FTH_CORE.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFTH_CORE_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromQuery" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_GetAllFromQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFromQuery" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_GetAllFromQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFromQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromOneID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromOneID" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromOneID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromOneIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromOneField_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromOneField" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromOneField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromOneFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromTwoID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromTwoID" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ReadOneFieldFromTwoID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOneFieldFromTwoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_UpdateOneField_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneField" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_UpdateOneField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_UpdateOneField2_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneField2" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_UpdateOneField2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOneField2Response" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_InsertBeginField_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBeginField" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_InsertBeginField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBeginFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_InsertExchangePair_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExchangePair" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_InsertExchangePair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExchangePairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DeleteExchangePair_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExchangePair" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DeleteExchangePair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExchangePairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ExchangePairExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExchangePairExists" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ExchangePairExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExchangePairExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_PairExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:PairExists" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_PairExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PairExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_InsertPair_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPair" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_InsertPair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DeletePair_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePair" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DeletePair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_UpdatePairTail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePairTail" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_UpdatePairTail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePairTailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DeleteFromTableID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromTableID" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_DeleteFromTableID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromTableIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ValidateDomain_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDomain" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ValidateDomain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_IsDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsDate" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_IsDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ValidateEmailFormat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEmailFormat" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_ValidateEmailFormat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEmailFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_IsPhoneNumeric_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPhoneNumeric" />
+  </wsdl:message>
+  <wsdl:message name="IFTH_CORE_IsPhoneNumeric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPhoneNumericResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFTH_CORE">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/DoWork" message="tns:IFTH_CORE_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/DoWorkResponse" message="tns:IFTH_CORE_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/GetAll" message="tns:IFTH_CORE_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/GetAllResponse" message="tns:IFTH_CORE_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromQuery" message="tns:IFTH_CORE_ReadOneFieldFromQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromQueryResponse" message="tns:IFTH_CORE_ReadOneFieldFromQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFromQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/GetAllFromQuery" message="tns:IFTH_CORE_GetAllFromQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/GetAllFromQueryResponse" message="tns:IFTH_CORE_GetAllFromQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromOneID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromOneID" message="tns:IFTH_CORE_ReadOneFieldFromOneID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromOneIDResponse" message="tns:IFTH_CORE_ReadOneFieldFromOneID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromOneField">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromOneField" message="tns:IFTH_CORE_ReadOneFieldFromOneField_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromOneFieldResponse" message="tns:IFTH_CORE_ReadOneFieldFromOneField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromTwoID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromTwoID" message="tns:IFTH_CORE_ReadOneFieldFromTwoID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ReadOneFieldFromTwoIDResponse" message="tns:IFTH_CORE_ReadOneFieldFromTwoID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneField">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/UpdateOneField" message="tns:IFTH_CORE_UpdateOneField_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/UpdateOneFieldResponse" message="tns:IFTH_CORE_UpdateOneField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneField2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/UpdateOneField2" message="tns:IFTH_CORE_UpdateOneField2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/UpdateOneField2Response" message="tns:IFTH_CORE_UpdateOneField2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBeginField">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/InsertBeginField" message="tns:IFTH_CORE_InsertBeginField_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/InsertBeginFieldResponse" message="tns:IFTH_CORE_InsertBeginField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExchangePair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/InsertExchangePair" message="tns:IFTH_CORE_InsertExchangePair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/InsertExchangePairResponse" message="tns:IFTH_CORE_InsertExchangePair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExchangePair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/DeleteExchangePair" message="tns:IFTH_CORE_DeleteExchangePair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/DeleteExchangePairResponse" message="tns:IFTH_CORE_DeleteExchangePair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExchangePairExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ExchangePairExists" message="tns:IFTH_CORE_ExchangePairExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ExchangePairExistsResponse" message="tns:IFTH_CORE_ExchangePairExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PairExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/PairExists" message="tns:IFTH_CORE_PairExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/PairExistsResponse" message="tns:IFTH_CORE_PairExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/InsertPair" message="tns:IFTH_CORE_InsertPair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/InsertPairResponse" message="tns:IFTH_CORE_InsertPair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/DeletePair" message="tns:IFTH_CORE_DeletePair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/DeletePairResponse" message="tns:IFTH_CORE_DeletePair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePairTail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/UpdatePairTail" message="tns:IFTH_CORE_UpdatePairTail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/UpdatePairTailResponse" message="tns:IFTH_CORE_UpdatePairTail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromTableID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/DeleteFromTableID" message="tns:IFTH_CORE_DeleteFromTableID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/DeleteFromTableIDResponse" message="tns:IFTH_CORE_DeleteFromTableID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDomain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ValidateDomain" message="tns:IFTH_CORE_ValidateDomain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ValidateDomainResponse" message="tns:IFTH_CORE_ValidateDomain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/IsDate" message="tns:IFTH_CORE_IsDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/IsDateResponse" message="tns:IFTH_CORE_IsDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEmailFormat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/ValidateEmailFormat" message="tns:IFTH_CORE_ValidateEmailFormat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/ValidateEmailFormatResponse" message="tns:IFTH_CORE_ValidateEmailFormat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPhoneNumeric">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFTH_CORE/IsPhoneNumeric" message="tns:IFTH_CORE_IsPhoneNumeric_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFTH_CORE/IsPhoneNumericResponse" message="tns:IFTH_CORE_IsPhoneNumeric_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFTH_CORE" type="tns:IFTH_CORE">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromQuery">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ReadOneFieldFromQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFromQuery">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/GetAllFromQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromOneID">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ReadOneFieldFromOneID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromOneField">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ReadOneFieldFromOneField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOneFieldFromTwoID">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ReadOneFieldFromTwoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneField">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/UpdateOneField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOneField2">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/UpdateOneField2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBeginField">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/InsertBeginField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExchangePair">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/InsertExchangePair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExchangePair">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/DeleteExchangePair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExchangePairExists">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ExchangePairExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PairExists">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/PairExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPair">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/InsertPair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePair">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/DeletePair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePairTail">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/UpdatePairTail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromTableID">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/DeleteFromTableID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDomain">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ValidateDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDate">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/IsDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEmailFormat">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/ValidateEmailFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPhoneNumeric">
+      <soap:operation soapAction="http://tempuri.org/IFTH_CORE/IsPhoneNumeric" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FTH_CORE">
+    <wsdl:port name="BasicHttpBinding_IFTH_CORE" binding="tns:BasicHttpBinding_IFTH_CORE">
+      <soap:address location="http://150.109.42.139:8888/FTH_CORE.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

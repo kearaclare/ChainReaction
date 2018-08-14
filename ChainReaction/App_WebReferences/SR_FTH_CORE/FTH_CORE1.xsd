@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strQuery" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromQueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadOneFieldFromQueryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFromQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSQL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFromQueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllFromQueryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromOneID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromOneIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadOneFieldFromOneIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromOneField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIdFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromOneFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadOneFieldFromOneFieldResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromTwoID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strID1_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strID1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strID2_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strID2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOneFieldFromTwoIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadOneFieldFromTwoIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOneField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTableID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOneFieldResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOneField2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTableIDName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTableID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOneField2Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBeginField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBeginFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertBeginFieldResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertExchangePair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExchangeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertExchangePairResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExchangePair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExchangeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExchangePairResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExchangePairExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExchangeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExchangePairExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExchangePairExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PairExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PairExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PairExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPairResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePairResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePairTail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair1_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pair2_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataFieldValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePairTailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFromTableID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TableID_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TableID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFromTableIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DomainText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDomainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDomainResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsDateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEmailFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strEmail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEmailFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateEmailFormatResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPhoneNumeric">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPhoneNumericResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsPhoneNumericResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
